@@ -29,9 +29,9 @@
 при создании данного селекта имя тега селекта в html выглядит name=film[genre]
 
 ```
-	###@film.map{|f|....
+	@film.map{|f|....
 
-   	<%= f.select ###:genre, Genre.all.collect{ |c| [c.Name, c.id] } %>
+   	<%= f.select :genre, Genre.all.collect{ |c| [c.Name, c.id] } %>
 ```
  В значение value данного селекта передаётся id а в содержимое тегов выборки Name
  (пример:)
