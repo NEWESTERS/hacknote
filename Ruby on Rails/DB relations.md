@@ -23,3 +23,23 @@
 * has_many в миграции писать не нужно
 
 * можно прописать изменения для нескольких таблиц в одном файле
+
+## Select in Rails  ---------->
+параметры всегда передаются как строки!!!
+при создании данного селекта имя тега селекта в html выглядит name=film[genre]
+извлекается в параметры следующим образом params[:film][:genre]
+```
+	@films.map{|f|....
+
+   	<%= f.select :genre, Genre.all.collect{ |c| [c.Name, c.id] } %>
+```
+ В значение value данного селекта передаётся id а в содержимое тегов выборки Name
+ пример:
+ 
+	 <select>
+		<option value="id">Name</option>
+		......
+В параметр передается id
+```
+	@film.genre = Genre.all.select{ |x| x.id == params[:film][:genre].to_i }[0]
+```	
