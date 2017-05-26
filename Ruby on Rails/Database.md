@@ -31,7 +31,7 @@ class AddUserToUploads < ActiveRecord::Migration[5.0]
   end
 end
 ```
-Вместо *add_reference* можно также написать:
+Вместо **add_reference** можно также написать:
 ```ruby
 change_table :users do |t|
   t.belongs_to :order, index: true
