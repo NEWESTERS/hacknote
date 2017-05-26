@@ -59,6 +59,6 @@ time = Time.new 2017, 5, 23, event["date(4i)"].to_i, event["date(5i)"].to_i
 ```
 Получение даты и времени в виде форматированной строки:
 ```ruby
-date.strftime("%d %B %Y")
-time.strftime("%H:%M")
+date.strftime("%d %B %Y")	# 26 May 2017
+time.strftime("%H:%M")		# 21:00
 ```
