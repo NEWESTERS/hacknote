@@ -4,7 +4,7 @@
 ```ruby
 <%= select_tag 'name', options_for_select( Model.all.collect{ |u| [u.name, u.id] } ) %>
 ```
-Этот тег создаст следующий select:
+Этот Rails-тег создаст следующий **select**:
 ```html
 <select id="name" name="name">
   <option value="1">Brad</option>
