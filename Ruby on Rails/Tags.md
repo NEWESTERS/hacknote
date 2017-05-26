@@ -1,6 +1,6 @@
 # Теги в Rails
 ## Select tag
-Во view select создаётся следующим образом:
+**Select tag** создаётся следующим образом:
 ```ruby
 <%= select_tag 'name', options_for_select( Model.all.collect{ |u| [u.name, u.id] } ) %>
 ```
