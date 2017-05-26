@@ -7,7 +7,7 @@ function update() {
 	$.ajax({
 		url: '/url',	// Путь к функции на сервере
 		type: 'GET',
-		data: { genre: $('#genre_test')[0].value },
+		data: { // Данные, отправляемые на сервер },
 		success: function(data) {
 			// Код, который выполнится при получении ответа от сервера
 			// В date лежит ответ от сервера
