@@ -31,20 +31,20 @@ class AddUserToUploads < ActiveRecord::Migration[5.0]
   end
 end
 ```
-Вместо **add_reference** можно также написать:
-```ruby
-change_table :users do |t|
-  t.belongs_to :order, index: true
-```
-Команды в функцию **change** так же можно добавлять вручную
+Команды в функцию **change** также можно добавлять вручную
 
+Вместо **add_reference** можно написать:
+```ruby
+change_table :orders do |t|
+  t.belongs_to :user, index: true
+```
 Далее неообходимо сделать миграцию базы данных командой
 ```
 $ rake db:migrate
 ```
 Удаление связи:
 ```ruby
-remove_reference :products, :user, index: true, foreign_key: true
+remove_reference :orders, :user, index: true, foreign_key: true
 ```
 Замечания:
 
