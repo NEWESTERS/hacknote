@@ -26,7 +26,7 @@ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/sub
 ```
 В папке */users/USERNAME/bin* создастся домен, запускающий Sublime Text
 
-Для вызова редактора короткой командой *$ subl* нужно сделать связь этой команды с доменом:
+Для вызова редактора короткой командой **$ subl** нужно сделать связь этой команды с доменом:
 ```
 alias subl="/users/USERNAME/bin/subl"
 ```
