@@ -1,6 +1,6 @@
 # Bash (OS X)
 ## Добавление команд в .bash_profile
-Команды, добавленные в .bash_profile будут выполняться при каждом запуске терминала
+Команды, добавленные в **.bash_profile** будут выполняться при каждом запуске терминала
 
 Запустить терминал
 
@@ -12,7 +12,7 @@ $ cd ~/
 ```
 $ touch .bash_profile
 ```
-Отредактировать файл любым редактором, например TextEdit
+Отредактировать файл любым редактором, например **TextEdit**
 ```
 $ open -e .bash_profile
 ```
@@ -24,7 +24,7 @@ $ open -e .bash_profile
 ```
 $ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 ```
-В папке */users/USERNAME/bin* создастся домен, запускающий Sublime Text
+В папке */users/USERNAME/bin* создастся домен, запускающий **Sublime Text**
 
 Для вызова редактора короткой командой **$ subl** нужно сделать связь этой команды с доменом:
 ```
