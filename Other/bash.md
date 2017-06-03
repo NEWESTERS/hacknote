@@ -22,12 +22,12 @@ $ open -e .bash_profile
 
 Выполнить команду (для Sublime Text 3)
 ```
-ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+$ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 ```
 В папке */users/USERNAME/bin* создастся домен, запускающий Sublime Text
 
 Для вызова редактора короткой командой **$ subl** нужно сделать связь этой команды с доменом:
 ```
-alias subl="/users/USERNAME/bin/subl"
+$ alias subl="/users/USERNAME/bin/subl"
 ```
 Связь актуальна до завершения терминальной сессии, для перманентного её действия необходимо прописать вышеописанную команду в **.bash_profile** 
