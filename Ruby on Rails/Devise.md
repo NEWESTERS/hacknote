@@ -30,7 +30,7 @@ end
 Создал контроллер **users_controller** и прописал там функцию **index**
 ```ruby
 def index
-  	@users = User.all.order("created_at DESC")
+  	@users = User.all
 end
 ```
 Cоздаю представление **index.html.erb** и прописываю вывод полей в сгенеренной папке **users**
