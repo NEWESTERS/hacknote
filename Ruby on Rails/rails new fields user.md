@@ -27,9 +27,13 @@ rails g migration AddFieldsToUsers birthday:date name:string role:string
 			  end
 ```
 роль не пишу тк потом ее будет давать админ(еще не сделано, не придумано как но должен)
+
 4)выполняю миграцию
+
 5)добавляю поля name и birthday во вьюхи девайса(регистрация и редактор)
+
 6)хочу построить таблицу юзеров
+
 7)создал контроллер users_controller и прописал там функцию index
 ```
 def index
