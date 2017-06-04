@@ -1,5 +1,5 @@
-# Добавляем поля в Users
-## Изменение структуры базы данных
+# Devise
+## Добавление полей в Users
 Создать миграцию терминальной командой:
 ```
 $ rails g migration AddFieldsToUsers birthday:date name:string
