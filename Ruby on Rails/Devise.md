@@ -11,7 +11,7 @@ devise_for :users, controllers: {
 	sessions: 'users/sessions'
 	}
 ```
-3) В **registrations_controller.rb**
+В **registrations_controller.rb**
 ```ruby
 before_filter :configure_permitted_parameters
 # ...
@@ -21,23 +21,22 @@ def configure_permitted_parameters
 	end
 end
 ```
-4) Выполняю миграцию
+Выполняю миграцию
 
-5) Добавляю поля **name** и **birthday** во вьюхи девайса (регистрация и редактор)
+Добавляю поля **name** и **birthday** в представления **registrations** и **edit**
 
-6) Хочу построить таблицу юзеров
+Хочу построить таблицу юзеров
 
-7) Создал контроллер **users_controller** и прописал там функцию **index**
+Создал контроллер **users_controller** и прописал там функцию **index**
 ```ruby
 def index
   	@users = User.all.order("created_at DESC")
 end
 ```
-8) Рукаааааааами создаю вьюху **index.html.erb** и прописываю вывод полей в сгенеренной папке **users**
+Cоздаю представление **index.html.erb** и прописываю вывод полей в сгенеренной папке **users**
 
-9) Прописываю в рутах
+Прописываю в рутах
 ```ruby
 match '/users', to: 'users#index', via: 'get'
 
 ```
-10) Таблица создана, проблема с выводом сгенеренных полей
