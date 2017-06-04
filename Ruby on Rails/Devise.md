@@ -35,7 +35,7 @@ end
 ```
 Cоздаю представление **index.html.erb** и прописываю вывод полей в сгенеренной папке **users**
 
-Прописываю в рутах
+Прописываю в **routes.rb**
 ```ruby
 match '/users', to: 'users#index', via: 'get'
 
