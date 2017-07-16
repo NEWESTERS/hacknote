@@ -66,5 +66,5 @@ $ rake db:rollback STEP=6
 ```
 Откат до определённой миграции:
 ```
-rake db:migrate:down VERSION=20100905201547
+$ rake db:migrate:down VERSION=20100905201547
 ```
