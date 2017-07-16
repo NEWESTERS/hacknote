@@ -59,3 +59,12 @@ class Order < ApplicationRecord
 	belongs_to :user, optional: true
 end
 ```
+## Откат миграций БД
+Откат на 6 шагов назад:
+```
+$ rake db:rollback STEP=6
+```
+Откат до определённой миграции:
+```
+rake db:migrate:down VERSION=20100905201547
+```

@@ -21,22 +21,9 @@ def configure_permitted_parameters
   end
 end
 ```
-Выполняю миграцию
-
-Добавляю поля **name** и **birthday** в представления **registrations** и **edit**
-
-Хочу построить таблицу юзеров
-
-Создал контроллер **users_controller** и прописал там функцию **index**
-```ruby
-def index
-  @users = User.all
-end
+Выполнить миграцию
 ```
-Cоздаю представление **index.html.erb** и прописываю вывод полей в сгенерированной папке **users**
-
-Прописываю в **routes.rb**
-```ruby
-match '/users', to: 'users#index', via: 'get'
-
+$ rake db:migrate
 ```
+
+Добавить поля **name** и **birthday** в представления **registrations** и **edit**
