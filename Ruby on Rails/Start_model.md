@@ -10,8 +10,10 @@ rails g model #Modelname# #attr1#:string #attr2#:text
 ```console
 rake db:migrate
 ```
-Сгенерировать контроллер для модели #Modelnames#
-
+Сгенерировать контроллер для модели 
+```console
+rails g controller #ModelnameS#
+```
 это сразу создаст **view** (вместе со стилями и js)
 
 затем в контроллере надо прописывать функции и для них создавать представления
