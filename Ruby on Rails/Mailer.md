@@ -1,6 +1,6 @@
 # Организация почтовой рассылки
 ## Настройка SMTP
-В файле */config/enviroments/development.rb (production.rb)* включить SMTP и прописать данные для входа в почтовый ящик (на примере gmail):
+В файле */config/enviroments/development.rb (production.rb)* включить **SMTP** и прописать данные для входа в почтовый ящик (на примере **gmail**):
 ```ruby
 config.action_mailer.delivery_method = :smtp
 config.action_mailer.smtp_settings = {
@@ -21,12 +21,12 @@ $ rails generate mailer SampleMailer
 В получившемся файле */app/controllers/mailers/sample_mailer.rb* создать метод, отправляющий письма:
 ```ruby
 class SampleMailer < ApplicationMailer
-	default :from => "from@example.com"
+  default :from => "from@example.com"
 
-	def send_email(user)
-	    @user = user	# переменная, которую можно будет использовать во view
-	    mail(:to => user.email, :subject => "Тема письма")
-  	end
+  def send_email(user)
+    @user = user	# переменная, которую можно будет использовать во view
+    mail(:to => user.email, :subject => "Тема письма")
+  end
 end
 ```
 Создать шаблон письма */app/views/sample_mailer/send_email.html.erb*:
