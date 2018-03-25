@@ -31,4 +31,4 @@ $ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/s
 $ alias subl="/users/USERNAME/bin/subl"
 ```
 Связь актуальна до завершения терминальной сессии, для перманентного её действия необходимо прописать вышеописанную команду в **.bash_profile** 
-11111111 - тест гита
+
