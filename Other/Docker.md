@@ -22,6 +22,7 @@ $ docker run <image_name> <command>
 1. Docker находит образ `<image_name>` и запускает контейнер с ним
 2. В контейнере выполняется команда `<command>`
 3. Контейнер завершается
+
 Запуск контейнера и работа с ним через `sh`:
 ```
 $ docker run -it <image_name> sh
@@ -31,6 +32,7 @@ $ docker run -it <image_name> sh
 * `-P` — публикация портов
 * `--name <name>` — задание названия контейнеру
 * `-p <port>:<tcp_port>` — запуск контейнера с кастомным портом
+
 Остановка "откреплённого" контейнера:
 ```
 $ docker stop <container_id>
@@ -51,6 +53,7 @@ $ docker ps -a
 $ docker rm <container_id> <container_id> ...
 ```
 Удаляет контейнеры с **id** `<container_id>`
+
 Удаление неиспользуемых контейнеров:
 ```
 $ docker rm $(docker ps -a -q -f status=exited)
@@ -67,8 +70,10 @@ $ docker port <name>
 docker build <path>
 ```
 Создаёт образ на основе **Dockerfile**
+
 `<path>` — директория или URL, по которому расположен **Dockerfile**
-Если **Dockerfile** содержит несколько стадий билда, выбрать конкретную стадию можно параметром `--target`
+
+Если **Dockerfile** содержит несколько стадий билда, выбрать конкретную стадию можно параметром `--target`:
 ```
 docker build --target production-env .
 ```
@@ -90,6 +95,7 @@ FROM <image_name>:<version>
 ARG <argument>=<value>
 ```
 Переменная с названием `<argument>` и значением `<value>`
+
 Пример использования `ARG`:
 ```
 ARG VERSION=latest
@@ -100,19 +106,23 @@ FROM busybox:$VERSION
 RUN <command>
 ```
 Запускает внутри контейнера комманду `<command>`
+
 По умолчанию используется оболочка `/bin/sh -c`
+
 Если команда содержит несколько строк, в конце каждой из них нужно ставить символ `\`
 ### LABEL
 ```
 LABEL <key>=<value> <key>=<value> ...
 ```
 Добавляет образу метаданные с ключом `<key>` со значеним `<value>`
+
 Просмотреть метаданные образа можно командой `docker inspect <image_name>`
 ### EXPOSE
 ```
 EXPOSE <port>/<protocol>
 ```
 Обозначает порт, прослушиваемый контейнером
+
 Эти порты следует указать при выполнении `docker run`
 ### ENV
 ```
