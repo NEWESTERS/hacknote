@@ -11,7 +11,7 @@ $ docker pull <image_name>
 
 ## Список загруженных образов
 ```
-$ docker list
+$ docker images
 ```
 
 ## Запуск контейнера
@@ -60,9 +60,41 @@ $ docker port <name>
 ```
 `<name>` — имя контейнера
 
-
-
-
+## Dockerfile
+### From
+```
+FROM <image_name>:<version>
+```
+Устанавливает базовый образ `<image_name>` версии `<version>`
+### ARG
+```
+ARG <argument>=<value>
+```
+Переменная с названием `<argument>` и значением `<value>`
+Пример использования `ARG`:
+```
+ARG VERSION=latest
+FROM busybox:$VERSION
+```
+### RUN
+```
+RUN <command>
+```
+Запускает внутри контейнера комманду `<command>`
+По умолчанию используется оболочка `/bin/sh -c`
+Если команда содержит несколько строк, в конце каждой из них нужно ставить символ `\`
+### LABEL
+```
+LABEL <key>=<value> <key>=<value> <key>=<value> ...
+```
+Добавляет образу метаданные с ключом `<key>` со значеним `<value>`
+Просмотреть метаданные образа можно командой `docker inspect <image_name>`
+### EXPOSE
+```
+EXPOSE <port>/<protocol>
+```
+Обозначает порт, прослушиваемый контейнером
+Эти порты следует указать при выполнении `docker run`
 
 
 
