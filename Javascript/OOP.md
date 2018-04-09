@@ -21,7 +21,7 @@ function Cat(name) {
   this.paws_number = 4 // У котов всегда 4 лапы, поэтому значение будет по умолчанию
 }
 
-// Связываем дочерних конструкторов с родительскими
+// Связываем дочерние конструкторов с родительскими
 Fish.prototype = Object.create(Animal.prototype)
 Cat.prototype = Object.create(Animal.prototype)
 
