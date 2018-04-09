@@ -11,11 +11,13 @@ function Animal(name) {
 // Создаём дочерние конструкторы
 function Fish(name, fins_number) {
   Animal.call(this, name) // Вызов родительского конструктора
+  this.type = 'Рыба'
   this.fins_number = fins_number
 }
 
 function Cat(name) {
   Animal.call(this, name) // Вызов родительского конструктора
+  this.type = 'Кот'
   this.paws_number = 4 // У котов всегда 4 лапы, поэтому значение будет по умолчанию
 }
 
@@ -27,11 +29,11 @@ Cat.prototype = Object.create(Animal.prototype)
 var myFish = new Fish('Димон', 5)
 var myCat = new Cat('Борис')
 
-console.log(myFish.name + ' имеет ' + myFish.fins_number + ' плавников')
-console.log(myCat.name + ' имеет ' + myCat.paws_number + ' лапы')
+console.log(myFish.type + ' ' + myFish.name + ' имеет ' + myFish.fins_number + ' плавников')
+console.log(myCat.type + ' ' + myCat.name + ' имеет ' + myCat.paws_number + ' лапы')
 
-// Димон имеет 5 плавников
-// Борис имеет 4 лапы
+// Рыба Димон имеет 5 плавников
+// Кот Борис имеет 4 лапы
 ```
 ### Определение методов
 Допустим, имеется конструктор с публичными методами `getName` и `getMessage`:
