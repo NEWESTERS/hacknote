@@ -6,7 +6,6 @@
 ```
 sudo apt-get update
 sudo apt-get install build-essential libssl-dev
-
 ```
 Скачиваем скрипт install_nvm.sh и запускаем
 
@@ -14,7 +13,6 @@ sudo apt-get install build-essential libssl-dev
 curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
 
 bash install_nvm.sh
-
 ```
 
 Для получения доступа к функционалу nvm, вам необходимо перелогиниться в системе, 
@@ -37,14 +35,13 @@ nvm ls
 ```
 
 Для установки node какой либо версии 
-```
+(установит версию 7.9.0)
 ```
 nvm install 7.9.0
-//(установит версию 7.9.0)
 ```
 Для для использования node какой либо версии 
+(использует версию 6.0.0)
 
 ```
 nvm use 6.0.0
-//(использует версию 6.0.0)
 ```
