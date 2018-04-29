@@ -1,9 +1,11 @@
 # Express
-[Express](https://www.npmjs.com/package/express) — фреймворк для упрощения запуска **web**-сервера
-Установите библиотеку **Express**:
+[Express](https://www.npmjs.com/package/express) — библиотека для упрощения запуска **web**-сервера.
+
+Установка библиотеки **Express**:
 ```
 $ npm i --save express
 ```
+## Пример
 Простейшее **web**-приложение на основе **Express**:
 ```javascript
 const app = require('express')() // скобки в конце нужны для вызова конструктора
