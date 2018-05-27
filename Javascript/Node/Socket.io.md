@@ -56,7 +56,7 @@ http.listen(3000, function(){
 <script>
   	$(function () {
   		// Инициализация Socket.io
-        var socket = io();
+		var socket = io();
 
         $('form').submit(function(){
         	// Рассылка сообщения подключенным клиентам при отправке формы
