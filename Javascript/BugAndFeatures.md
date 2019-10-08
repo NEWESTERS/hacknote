@@ -1,6 +1,6 @@
 # Bugs and Features
 ### Использование setTimeout внутри итератора выдает timer
-Подобный код выдаст Ошибку, так как в Promise.all() попадает массив чисел связанных с таймером вместо промисов 
+Подобный код выдаст не ошибку, но неверный результат, так как в Promise.all() попадает массив чисел связанных с таймером вместо промисов 
 ```javascript
 await Promise.all(['default_branches', 'okopf', 'countries', 'employment_position']
             .map((item, i) => setTimeout(() =>
