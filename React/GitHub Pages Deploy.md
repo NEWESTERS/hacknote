@@ -1,17 +1,21 @@
 # Deploy React-приложения на GitHub Pages
+
 Для начала нужно добавить в проект пакет "**gh-pages**":
-```
-$ npm install --save-dev gh-pages
+
+```bash
+npm install --save-dev gh-pages
 ```
 
 Затем в секцию `"scripts"` файла *package.json* необходимо добавить следующие строки:
-```
+
+```json
 "predeploy": "npm run build",
 "deploy": "gh-pages -d build"
 ```
 
 Также в корень *package.json* нужно добавить такую строку:
-```
+
+```json
 "homepage": "http://username.github.io/<repo_name>"
 ```
 
